@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa;
+}
+
+.navbar {
+    box-shadow: 0 2px 4px rgba(0,0,0,.1);
+}
+
+.card {
+    border: none;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.card:hover {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.comment {
+    margin-bottom: 1.5rem;
+}
+
+.reply {
+    border-left: 2px solid #dee2e6;
+    padding-left: 1rem;
+    margin: 1rem 0 0 1rem;
+}
+
+.comment-option {
+    display: flex;
+    align-items: center;
+}
+
+.like {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.like input {
+    display: none;
+}
+
+svg {
+    width: 24px;
+    height: 24px;
+    fill: #6c757d;
+    transition: all 0.3s;
+}
+
+.like:hover svg {
+    transform: scale(1.1);
+}
+
+.like input:checked ~ svg {
+    fill: #007bff;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    .card-body {
+        padding: 1rem;
+    }
+    
+    .comment-option button {
+        padding: 0.25rem 0.5rem;
+        font-size: 0.875rem;
+    }
+}
