@@ -26,17 +26,86 @@
 
     <!-- Edit Comment Modal -->
     <div class="modal fade" id="updateCommentModal" tabindex="-1" aria-hidden="true">
-        <!-- ... (modal content remains the same) ... -->
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Edit Comment</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="updateCommentForm">
+                        <input type="hidden" id="updateCommentID" name="tbl_comment_id">
+                        <div class="form-group">
+                            <label for="updateCommentator">Name</label>
+                            <input type="text" class="form-control" id="updateCommentator" name="commentator" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="updateComment">Comment</label>
+                            <textarea class="form-control" id="updateComment" name="comment" rows="3" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Update Comment</button>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- Add Reply Modal -->
     <div class="modal fade" id="replyCommentModal" tabindex="-1" aria-hidden="true">
-        <!-- ... (modal content remains the same) ... -->
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Reply to Comment</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="replyCommentForm">
+                        <input type="hidden" id="replyCommentID" name="tbl_comment_id">
+                        <p>Replying to: <span id="replyTo"></span></p>
+                        <div class="form-group">
+                            <label for="replier">Your Name</label>
+                            <input type="text" class="form-control" id="replier" name="replier" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="reply">Your Reply</label>
+                            <textarea class="form-control" id="reply" name="reply" rows="3" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit Reply</button>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <!-- Update Reply Modal -->
     <div class="modal fade" id="updateReplyModal" tabindex="-1" aria-hidden="true">
-        <!-- ... (modal content remains the same) ... -->
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Edit Reply</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="updateReplyForm">
+                        <input type="hidden" id="updateReplyID" name="tbl_reply_id">
+                        <div class="form-group">
+                            <label for="updateReplier">Name</label>
+                            <input type="text" class="form-control" id="updateReplier" name="replier" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="updateReply">Reply</label>
+                            <textarea class="form-control" id="updateReply" name="reply" rows="3" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Update Reply</button>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
 
     <div class="container mt-5">
@@ -146,7 +215,7 @@
     </div>
 
     <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"></script>
 

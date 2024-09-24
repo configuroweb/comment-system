@@ -1,5 +1,5 @@
 <?php
-include ("../conn/conn.php");
+include("../conn/conn.php");
 
 if (isset($_GET['comment'])) {
     $commentID = $_GET['comment'];
@@ -13,16 +13,8 @@ if (isset($_GET['comment'])) {
         $stmtReply->bindParam('tbl_comment_id', $commentID, PDO::PARAM_INT);
         $stmtReply->execute();
 
-        echo"
-        <script>
-            alert('Comment Deleted Successfully');
-            window.location.href = 'http://localhost/comment-system/';
-        </script>
-        ";
-        exit();
+        echo "success";
     } catch (PDOException $e) {
         echo "Error: " . $e->getMessage();
     }
 }
-
-?>
